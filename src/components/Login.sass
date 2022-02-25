@@ -1,0 +1,59 @@
+@use '../mixins'
+    
+.Login
+    @include mixins.Container
+    @include mixins.Center()
+    
+    width: 300px
+    text-align: center
+
+    .error
+        color: white
+        background-color: #ff000080
+        border: 2px solid #ff0000b7
+        border-radius: 5px
+        display: block
+        margin: 10px 0
+
+    a
+        position: absolute
+        top: calc(100% + 5px)
+        left: 50%
+        transform: translate(-50%, 0%)
+        cursor: pointer
+        transition: .5s
+        &:hover
+            color: hsl(0, 0, 50%)
+
+    input
+        border: none
+        border-bottom: 2px solid #fff
+        background-color: transparent
+        color: hsl(0, 0, 100%)
+        font-size: 1.5em
+        padding: 10px
+        width: 80%
+        &:focus
+            outline: none
+    button
+        background-color: hsl(0, 0, 20%)
+        border: none
+        border-radius: 5px
+        color: hsl(0, 0, 100%)
+        font-size: 1.5em
+        padding: 10px
+        width: 100%
+        transition: .5s
+        &:hover
+            background-color: hsl(0, 0, 25%)
+@mixin Container
+        background-color: hsl(0, 0, 15%)
+    
+        border-radius: 5px
+    
+        box-shadow: 0 0 10px hsl(0, 0, 5%)
+    
+        color: hsl(0, 0, 100%)
+    
+        padding: 20px
+      
